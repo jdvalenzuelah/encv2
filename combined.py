@@ -10,7 +10,6 @@ def encrypt(msg: str) -> Tuple[str]:
     msg1, key1 = enc_trans(msg)
     msg2, key2 = enc_sus(msg1)
     keys = { '1': key1, '2':key2 }
-    print(keys)
     return msg2, json.dumps(keys)
 
 def decrypt(msg: str, key: str) -> str:
